@@ -1,0 +1,46 @@
+<style>
+div {
+ text-align: center;
+}
+
+.tube {
+  transform: rotate(48deg);
+  height: 80%;
+}
+@keyframes spin {
+    0% { transform: rotate(48deg);}
+    100% { transform: rotate(225deg);}
+}
+.tube:focus {
+    animation-name: spin;
+    animation-duration: 1s;
+}
+.tube:active{
+    animation: none;
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Noisetube.jpg">
+    <title>Online Groan tube</title>
+</head>
+<body>
+    <br><br><br><br>
+    <div>
+        <img src="Noisetube.jpg" class="tube" id="tube" tabindex="0" onclick="play()">
+    </div>
+    <audio id="audio" src="groan-tube.mp3"></audio>
+    <script>
+       function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+    </script>
+    <!--CREATED BY ANGEL RUBEN ACOSTA MERINO-->
+</body>
+</html>
+
